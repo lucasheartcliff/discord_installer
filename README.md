@@ -54,7 +54,6 @@ To install BetterDiscord using the `better_discord_installer.sh` script, follow 
 
 This script performs the following actions:
 
-- Detects the Linux distribution and version.
 - Downloads the appropriate Discord package.
 - Installs Discord using the system's package manager or manually, if necessary.
 
