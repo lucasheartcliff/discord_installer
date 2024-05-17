@@ -8,10 +8,12 @@ This repository contains scripts to facilitate the installation of Discord and B
 
 - `discord_installer.sh`: A script to install the latest version of Discord.
 - `better_discord_installer.sh`: A script to install BetterDiscord, an extension for Discord that enhances its functionality.
+- `autostart.sh`: A script to create a systemd service to run at Linux startup.
+- `install.sh`: A script to run both `discord_installer.sh` and `better_discord_installer.sh` scripts.
 
 ## Requirements
 
-- A Linux distribution (tested on Ubuntu, Debian and Fedora).
+- A Linux distribution (tested on Ubuntu, Debian, and Fedora).
 - `wget` installed on your system.
 - `tar` for extracting files.
 - `npm` and `pnpm` for BetterDiscord building and installation.
@@ -48,6 +50,36 @@ To install BetterDiscord using the `better_discord_installer.sh` script, follow 
    ./better_discord_installer.sh
    ```
 
+### Running Both Install Scripts
+
+To run both `discord_installer.sh` and `better_discord_installer.sh` using the `install.sh` script, follow these steps:
+
+1. **Make the Script Executable:**
+
+   ```bash
+   chmod +x install.sh
+   ```
+
+2. **Run the Script:**
+   ```bash
+   ./install.sh
+   ```
+
+### Creating a Service to Run on Linux Startup
+
+To create a systemd service using the `autostart.sh` script, follow these steps:
+
+1. **Make the Script Executable:**
+
+   ```bash
+   chmod +x autostart.sh
+   ```
+
+2. **Run the Script:**
+   ```bash
+   sudo ./autostart.sh
+   ```
+
 ## Scripts Details
 
 ### discord_installer.sh
@@ -62,8 +94,22 @@ This script performs the following actions:
 This script performs the following actions:
 
 - Checks if Discord is already installed.
-- Downloads and build the BetterDiscord source code.
+- Downloads and builds the BetterDiscord source code.
 - Runs the BetterDiscord installer to integrate it with your existing Discord installation.
+
+### autostart.sh
+
+This script performs the following actions:
+
+- Creates a systemd service file to run a specified script at Linux startup.
+- Enables and starts the systemd service to ensure it runs on boot.
+
+### install.sh
+
+This script performs the following actions:
+
+- Runs `discord_installer.sh` to install Discord.
+- Runs `better_discord_installer.sh` to install BetterDiscord.
 
 ## Contributing
 
