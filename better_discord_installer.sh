@@ -1,3 +1,6 @@
+#!/bin/bash
+
+source check_internet.sh
 BETTER_DISCORD_PATH="$HOME/.better_discord/"
 CUR_PATH="$(pwd)"
 

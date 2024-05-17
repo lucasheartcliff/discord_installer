@@ -1,4 +1,6 @@
 #!/bin/bash
+
+source check_internet.sh
 TEMP_P=/tmp/$(uuidgen)
 DISCORD_PATH="/opt/Discord/"
 
