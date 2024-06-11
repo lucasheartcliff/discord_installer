@@ -14,6 +14,8 @@ if ! command -v pnpm &>/dev/null; then
 	exit 1
 fi
 
+sudo killall Discord
+
 if [! -d $BETTER_DISCORD_PATH ]; then
 	git clone https://github.com/BetterDiscord/BetterDiscord.git $BETTER_DISCORD_PATH
 fi
@@ -25,7 +27,5 @@ git pull
 pnpm install
 pnpm build
 pnpm inject
-
-killall Discord
 
 cd $CUR_PATH
