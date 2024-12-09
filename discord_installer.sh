@@ -1,4 +1,6 @@
 #!/bin/bash
+
+source check_internet.sh
 TEMP_P=/tmp/$(uuidgen)
 DISCORD_PATH="/opt/Discord/"
 
@@ -25,3 +27,4 @@ Path=/usr/bin
 " >> /opt/Discord/discord.desktop'
 sudo cp -r /opt/Discord/discord.desktop /usr/share/applications
 rm -rf $TEMP_P
+Discord &
